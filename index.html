@@ -390,13 +390,13 @@
     <div class="double" style="top: 224px;left: 1070px;transform: rotate(324deg);" onclick="dartScore('D12')"></div>
     <div class="double" style="top: 160px;left: 1196px;transform: rotate(342deg);" onclick="dartScore('D5')"></div>
 
-    <div class="single1" style="top: 208px;left: 1354px;transform: rotate(0deg);" onclick="dartScore('20')"></div>
+    <div class="single1" style="top: 208px;left: 1354px;transform: rotate(0deg);" onclick="dartScore('2o')"></div>
     <div class="single1" style="top: 226px;left: 1464px;transform: rotate(18deg);" onclick="dartScore('1')"></div>
     <div class="single1" style="top: 274px;left: 1562px;transform: rotate(36deg);" onclick="dartScore('18')"></div>
     <div class="single1" style="top: 352px;left: 1640px;transform: rotate(54deg);" onclick="dartScore('4')"></div>
     <div class="single1" style="top: 452px;left: 1692px;transform: rotate(72deg);" onclick="dartScore('13')"></div>
     <div class="single1" style="top: 560px;left: 1710px;transform: rotate(90deg);" onclick="dartScore('6')"></div>
-    <div class="single1" style="top: 670px;left: 1692px;transform: rotate(108deg);" onclick="dartScore('10')"></div>
+    <div class="single1" style="top: 670px;left: 1692px;transform: rotate(108deg);" onclick="dartScore('1o')"></div>
     <div class="single1" style="top: 770px;left: 1642px;transform: rotate(126deg);" onclick="dartScore('15')"></div>
     <div class="single1" style="top: 846px;left: 1564px;transform: rotate(144deg);" onclick="dartScore('2')"></div>
     <div class="single1" style="top: 898px;left: 1466px;transform: rotate(162deg);" onclick="dartScore('17')"></div>
@@ -432,13 +432,13 @@
     <div class="triple" style="top: 392px;left: 1216px;transform: rotate(324deg);" onclick="dartScore('T12')"></div>
     <div class="triple" style="top: 354px;left: 1288px;transform: rotate(342deg);" onclick="dartScore('T5')"></div>
 
-    <div class="single2" style="top: 400px;left: 1384px;transform: rotate(0deg);" onclick="dartScore('20')"></div>
+    <div class="single2" style="top: 400px;left: 1384px;transform: rotate(0deg);" onclick="dartScore('2o')"></div>
     <div class="single2" style="top: 408px;left: 1432px;transform: rotate(18deg);" onclick="dartScore('1')"></div>
     <div class="single2" style="top: 430px;left: 1476px;transform: rotate(36deg);" onclick="dartScore('18')"></div>
     <div class="single2" style="top: 464px;left: 1510px;transform: rotate(54deg);" onclick="dartScore('4')"></div>
     <div class="single2" style="top: 506px;left: 1532px;transform: rotate(72deg);" onclick="dartScore('13')"></div>
     <div class="single2" style="top: 556px;left: 1540px;transform: rotate(90deg);" onclick="dartScore('6')"></div>
-    <div class="single2" style="top: 604px;left: 1532px;transform: rotate(108deg);" onclick="dartScore('10')"></div>
+    <div class="single2" style="top: 604px;left: 1532px;transform: rotate(108deg);" onclick="dartScore('1o')"></div>
     <div class="single2" style="top: 648px;left: 1510px;transform: rotate(126deg);" onclick="dartScore('15')"></div>
     <div class="single2" style="top: 682px;left: 1476px;transform: rotate(144deg);" onclick="dartScore('2')"></div>
     <div class="single2" style="top: 704px;left: 1434px;transform: rotate(162deg);" onclick="dartScore('17')"></div>
@@ -704,8 +704,14 @@
           currentDart = 3*(comScored.replace( /^\D+/g, ''));
         } else if (comScored.indexOf('BULL') > -1) {
           currentDart = 50;
-        } else if (comScore = '0') {
+        } else if (comScored.indexOf('0') > -1) {
 	  currentDart = 0;
+	} else if (comScored.indexOf('2o') > -1) {
+	  currentDart = 20;
+	  comScore = 20;
+	} else if (comScored.indexOf('1o') > -1) {
+	  currentDart = 10;
+	  comScore = 10;
 	} else {
           currentDart = comScored;
         }
